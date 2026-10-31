@@ -57,10 +57,22 @@
 
 ## 安装
 
-### 方式一：装进 DSH profile（推荐）
+### 方式一：一条命令装进 profile（推荐）
+
+```bash
+# 从 GitHub 源码安装
+dsh plugin --profile web add github:ChencLi819/dsh-feed-scroll
+
+# Desktop 版把 profile 换成 desktop
+dsh plugin --profile desktop add github:ChencLi819/dsh-feed-scroll
+```
+
+装完**重启 DSH**（或动一下 profile 的 `cordis.patch.yml` 触发重载）。
+
+### 方式二：用插件自带的安装脚本
 
 ```powershell
-# 从插件目录（或 npm 包目录）里跑，幂等，可重复执行
+# 在插件目录里跑，幂等，可重复执行
 node tools/install.mjs
 ```
 
@@ -76,7 +88,7 @@ node tools/install.mjs --check                    # 只看装没装、要不要�
 node tools/install.mjs --profile-dir <path>       # 指定 profile（默认 ~/.dsh/profiles/desktop）
 ```
 
-### 方式二：手动装
+### 方式三：手动装
 
 在 profile 里 `pnpm add dsh-feed-scroll`（或 `link:` 到本地目录），然后让 `cordis.patch.yml` 插一行：
 
@@ -86,7 +98,7 @@ node tools/install.mjs --profile-dir <path>       # 指定 profile（默认 ~/.d
       name: dsh-feed-scroll
 ```
 
-改完**重启 DSH**（或动一下 profile 的 `cordis.patch.yml` 触发重载）。
+改完**重启 DSH**。
 
 ### 依赖
 
@@ -323,8 +335,9 @@ The plugin only prepares images and keeps the ledger — **the post itself is wr
 Scheduled rounds wake the group session (default: every 80 minutes, 10:00–23:00, max 9/day) and resume sessions that
 `dsh-qqbot` already evicted.
 
-```powershell
-node tools/install.mjs   # idempotent: pnpm add link + profile bundle + session keep-alive
+```bash
+dsh plugin --profile web add github:ChencLi819/dsh-feed-scroll   # install
+node tools/install.mjs                                           # or: idempotent local install script
 ```
 
 Requires DSH (with the `tools` service) and, for the sharing path, `@tencent-connect/dsh-qqbot`. MIT licensed.
