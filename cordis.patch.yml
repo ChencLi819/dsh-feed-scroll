@@ -1,0 +1,11 @@
+# dsh-feed-scroll bundle patch:只插一行 host 插件(feed_scroll / feed_share /
+# feed_history / feed_watch + 刷帖提示词 + 定时刷)。
+#
+# 不给 config:默认值写在 index.js 的 DEFAULTS 里,proactive 是深合并的,
+# 所以用户想调频率,只要在自己的 cordis.patch.yml 里补一行
+#   - id: feed-scroll
+#     config: { proactive: { maxPerDay: 5 } }
+# 就行(其余字段仍用默认值)。
+- insert:
+    - id: feed-scroll
+      name: dsh-feed-scroll

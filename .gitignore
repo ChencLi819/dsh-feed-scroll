@@ -1,0 +1,10 @@
+node_modules/
+*.log
+*.bak
+*.pre-*.bak
+.DS_Store
+Thumbs.db
+
+# 本地运行时产物（插件跑起来才会生成，不该进仓库）
+state.json
+diagnostic.json

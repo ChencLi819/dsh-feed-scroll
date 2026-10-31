@@ -1,0 +1,62 @@
+{
+  "name": "dsh-feed-scroll",
+  "version": "0.1.0",
+  "description": "刷内容插件:让 agent 自己逛 B站 / 知乎 / 掘金 / 贴吧 / HackerNews / 少数派 / IT之家 / GitHub,把有意思的视频与贴文分享进群(封面图 + 一句自己的话 + 链接),闲着时还能定时自己刷一轮。",
+  "type": "module",
+  "main": "index.js",
+  "icon": "icon.svg",
+  "exports": {
+    ".": "./index.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "lib/",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "tools/"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "engines": {
+      "dsh": ">=0.1.7-rc.1"
+    }
+  },
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "optionalDependencies": {
+    "sharp": "^0.35.5"
+  },
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "dsh",
+    "feed",
+    "bilibili",
+    "zhihu",
+    "juejin",
+    "tieba",
+    "hackernews",
+    "sspai",
+    "ithome",
+    "qqbot",
+    "share"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChencLi819/dsh-feed-scroll.git"
+  },
+  "homepage": "https://github.com/ChencLi819/dsh-feed-scroll#readme",
+  "bugs": {
+    "url": "https://github.com/ChencLi819/dsh-feed-scroll/issues"
+  },
+  "author": "ChencLi819",
+  "license": "MIT"
+}

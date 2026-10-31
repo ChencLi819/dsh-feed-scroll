@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Feed Scroll",
+    "description": "Lets your agent browse Bilibili, Zhihu, Juejin, Tieba, Hacker News, SSPAI, ITHome and GitHub, then share interesting videos and posts into the chat (cover image + one line of its own + link). Can also scroll on a schedule by itself."
+  }
+}
