@@ -60,10 +60,14 @@ Hacker News、少数派、IT之家、GitHub 拉取条目，读取正文、热评
 ### 3.1 通过 DSH CLI 安装（推荐）
 
 ```bash
+# 从 npm 安装
+dsh plugin --profile web add dsh-feed-scroll
+
+# 或从源码安装
 dsh plugin --profile web add github:ChencLi819/dsh-feed-scroll
 
 # Desktop 版
-dsh plugin --profile desktop add github:ChencLi819/dsh-feed-scroll
+dsh plugin --profile desktop add dsh-feed-scroll
 ```
 
 安装完成后重启 DSH，或在 profile 的 `cordis.patch.yml` 中修改任一配置值以触发重载。
